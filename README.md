@@ -5,7 +5,7 @@ python encode.py --image <image file> --watermark <watermark file> --result <res
 
 python decode.py --original <original image file> --image <image file> --result <result file>
 
-Use --alpha to change the alpha (default 2.0).
+Use --alpha to change the alpha (default 5.0).
 ```
 # Example
 ## encode:
