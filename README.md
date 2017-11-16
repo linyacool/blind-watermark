@@ -25,7 +25,7 @@ result<br>
 
 ## decode:
 ```shell
-python decode.py --original ori.png --image  res.png --result extract.png
+python decode.py --original ori.png --image res.png --result extract.png
 ```
 watermark<br>
 ![image](https://github.com/linyacool/blind-watermark/blob/master/extract.png)
