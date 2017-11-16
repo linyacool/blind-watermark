@@ -1,4 +1,5 @@
 # blind-watermark
+This was writen in Python2.7
 # Usage
 ```shell
 python encode.py --image <image file> --watermark <watermark file> --result <result file>
@@ -15,9 +16,16 @@ original image<br>
 watermark<br>
 ![image](https://github.com/linyacool/blind-watermark/blob/master/watermark.png)
 
+
+```shell
+python encode.py --image ori.png --watermark watermark.png --result res.png
+```
 result<br>
 ![image](https://github.com/linyacool/blind-watermark/blob/master/res.png)
 
 ## decode:
+```shell
+python decode.py --original ori.png --image  res.png --result extract.png
+```
 watermark<br>
 ![image](https://github.com/linyacool/blind-watermark/blob/master/extract.png)
