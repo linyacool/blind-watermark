@@ -1,5 +1,5 @@
 # blind-watermark
-This was writen in Python2.7
+This was written in Python2.7
 # Usage
 ```shell
 python encode.py --image <image file> --watermark <watermark file> --result <result file>
