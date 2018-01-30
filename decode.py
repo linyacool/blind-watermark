@@ -22,7 +22,7 @@ def main():
     ori = options.ori
     img = options.img
     res = options.res
-    alpha = options.alpha
+    alpha = float(options.alpha)
     if not os.path.isfile(ori):
         parser.error("original image %s does not exist." % ori)
     if not os.path.isfile(img):
