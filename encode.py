@@ -24,7 +24,7 @@ def main():
     res = options.res
     alpha = float(options.alpha)
     if not os.path.isfile(img):
-        parser.error("image %s does not exist." % img)
+        parser.error("image %s does not eist." % img)
     if not os.path.isfile(wm):
         parser.error("watermark %s does not exist." % wm)
     encode(img, wm, res, alpha)
@@ -36,12 +36,12 @@ def encode(img_path, wm_path, res_path, alpha):
     height, width, channel = np.shape(img)
     watermark = cv2.imread(wm_path)
     wm_height, wm_width = watermark.shape[0], watermark.shape[1]
-    x, y = range(height / 2), range(width)
+    x, y = range(int(height / 2)), range(width)
     random.seed(height + width)
-    random.shuffle(x)
-    random.shuffle(y)
+    random.shuffle(list(x))
+    random.shuffle(list(y))
     tmp = np.zeros(img.shape)
-    for i in range(height / 2):
+    for i in range(int(height / 2)):
         for j in range(width):
             if x[i] < wm_height and y[j] < wm_width:
                 tmp[i][j] = watermark[x[i]][y[j]]

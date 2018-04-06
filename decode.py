@@ -40,11 +40,11 @@ def decode(ori_path, img_path, res_path, alpha):
     watermark = np.real(watermark)
     res = np.zeros(watermark.shape)
     random.seed(height + width)
-    x = range(height / 2)
+    x = range(int(height / 2))
     y = range(width)
-    random.shuffle(x)
-    random.shuffle(y)
-    for i in range(height / 2):
+    random.shuffle(list(x))
+    random.shuffle(list(y))
+    for i in range(int(height / 2)):
         for j in range(width):
             res[x[i]][y[j]] = watermark[i][j]
     cv2.imwrite(res_path, res, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
