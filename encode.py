@@ -24,7 +24,7 @@ def main():
     res = options.res
     alpha = float(options.alpha)
     if not os.path.isfile(img):
-        parser.error("image %s does not eist." % img)
+        parser.error("image %s does not exist." % img)
     if not os.path.isfile(wm):
         parser.error("watermark %s does not exist." % wm)
     encode(img, wm, res, alpha)
