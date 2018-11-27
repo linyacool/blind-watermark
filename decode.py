@@ -40,10 +40,10 @@ def decode(ori_path, img_path, res_path, alpha):
     watermark = np.real(watermark)
     res = np.zeros(watermark.shape)
     random.seed(height + width)
-    x = range(int(height / 2))
-    y = range(width)
-    random.shuffle(list(x))
-    random.shuffle(list(y))
+    x = list(range(int(height / 2)))
+    y = list(range(width))
+    random.shuffle(x)
+    random.shuffle(y)
     for i in range(int(height / 2)):
         for j in range(width):
             res[x[i]][y[j]] = watermark[i][j]
