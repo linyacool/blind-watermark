@@ -32,7 +32,10 @@ def main():
 
 def decode(ori_path, img_path, res_path, alpha):
     ori = cv2.imread(ori_path)
-    img = cv2.imread(img_path)
+    img2 = cv2.imread(img_path)
+    oriw, orih = ori.shape[:2]
+    img = cv2.resize(img2,(orih,oriw),interpolation=cv2.INTER_CUBIC)
+
     ori_f = np.fft.fft2(ori)
     img_f = np.fft.fft2(img)
     height, width = ori.shape[0], ori.shape[1]
@@ -40,11 +43,11 @@ def decode(ori_path, img_path, res_path, alpha):
     watermark = np.real(watermark)
     res = np.zeros(watermark.shape)
     random.seed(height + width)
-    x = range(height / 2)
-    y = range(width)
+    x = list(range(height // 2))
+    y = list(range(width))
     random.shuffle(x)
     random.shuffle(y)
-    for i in range(height / 2):
+    for i in range(height // 2):
         for j in range(width):
             res[x[i]][y[j]] = watermark[i][j]
     cv2.imwrite(res_path, res, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
