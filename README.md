@@ -20,6 +20,12 @@ watermark<br>
 ```shell
 python encode.py --image ori.png --watermark watermark.png --result res.png
 ```
+```
+Or
+```shell
+python encode.py --image ori.png --watermark 'My Message' --result res.png
+```
+
 result<br>
 ![image](https://github.com/linyacool/blind-watermark/blob/master/res.png)
 
