@@ -12,10 +12,10 @@ Use --alpha to change the alpha (default 5.0).
 # Example
 ## encode:
 original image<br>
-![image](https://github.com/linyacool/blind-watermark/blob/master/ori.png)
+![image](./ori.png)
 
 watermark<br>
-![image](https://github.com/linyacool/blind-watermark/blob/master/watermark.png)
+![image](./watermark.png)
 
 
 ```shell
@@ -27,12 +27,12 @@ python encode.py --image ori.png --watermark 'My Message' --result res.png
 ```
 
 result<br>
-![image](https://github.com/linyacool/blind-watermark/blob/master/res.png)
+![image](./res.png)
 
 ## decode:
 ```shell
 python decode.py --original ori.png --image res.png --result extract.png
 ```
 watermark<br>
-![image](https://github.com/linyacool/blind-watermark/blob/master/extract.png)
+![image](./extract.png)
 

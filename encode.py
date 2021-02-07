@@ -34,13 +34,13 @@ def main():
     encode(img, wm, res, alpha)
 
 
-def generate_watermark_from_text( text, watermark_path, width=512, height=64 ):
+def generate_watermark_from_text( text, watermark_path, width=512, height=128 ):
     background_color = ( 255, 255, 255 )
     font_color = ( 0, 0, 0 )
     size = ( width, height )
     img = Image.new('RGB', size, color=background_color)
     d = ImageDraw.Draw(img)
-    fnt = ImageFont.truetype('./NotoSansCJKjp-Bold.otf', 32)
+    fnt = ImageFont.truetype('./NotoSansCJKjp-Bold.otf', 96)
     d.text((10,10), text, font=fnt, fill=font_color)
     img.save( watermark_path )
 
