@@ -45,7 +45,6 @@ def generate_watermark_from_text( text, watermark_path, width=512, height=128 ):
     img.save( watermark_path )
 
 
-
 def encode(img_path, wm_path, res_path, alpha):
     img = cv2.imread(img_path)
     img_f = np.fft.fft2(img)
