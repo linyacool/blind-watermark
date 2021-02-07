@@ -3,6 +3,7 @@
 # Usage
 ```shell
 python encode.py --image <image file> --watermark <watermark file> --result <result file>
+python encode.py --image <image file> --watermark 'custom watermark message' --result <result file>
 
 python decode.py --original <original image file> --image <image file> --result <result file>
 
